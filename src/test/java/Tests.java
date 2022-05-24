@@ -91,11 +91,4 @@ public class Tests {
             assertEquals(houseTest, house);
         }
     }
-    @Test
-    public void TestJsonDeSerialize2() throws IOException
-    {
-        String human = "123456";
-        Person person = SerializeHumansJackson.deserialize(human);
-        assertNull(person);
-    }
 }
