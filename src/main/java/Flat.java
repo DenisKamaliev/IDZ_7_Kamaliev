@@ -4,6 +4,18 @@ import java.util.Objects;
 
 public class Flat implements Serializable
 {
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public void setPerson(List<Person> person) {
+        this.person = person;
+    }
+
     private int number;
     private double area;
     private List<Person> person;
@@ -11,7 +23,7 @@ public class Flat implements Serializable
     {
         if(number <0 || area<0)
         {
-            throw new IllegalArgumentException("Введен отрицательный номер млмл площадь");
+            throw new IllegalArgumentException("Введен отрицательный номер или площадь");
         }
         if(person == null)
         {
@@ -21,8 +33,14 @@ public class Flat implements Serializable
         this.area = area;
         this.person = person;
     }
+    public Flat() {
+        number = 0;
+        area = 0;
+        person = null;
+    }
 
-    public double getPloshadi() {
+
+    public double getArea() {
         return area;
     }
 
@@ -38,7 +56,7 @@ public class Flat implements Serializable
     public String toString() {
         return "Flat{" +
                 "number=" + number +
-                ", ploshadi=" + area +
+                ", area=" + area +
                 ", person=" + person +
                 '}';
     }

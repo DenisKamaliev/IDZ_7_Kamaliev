@@ -30,7 +30,7 @@ public class Person implements Serializable {
         bDay = 0;
     }
 
-    public String getMiddleName() {
+    public String getSecondName() {
         return secondName;
     }
 
@@ -38,7 +38,7 @@ public class Person implements Serializable {
         return firstName;
     }
 
-    public String getLastName() {
+    public String getFathersName() {
         return fathersName;
     }
 

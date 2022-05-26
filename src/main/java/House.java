@@ -9,6 +9,14 @@ public class House implements Serializable {
     private Person housemate;
     private List<Flat> apartments;
 
+    public void setHousemate(Person housemate) {
+        this.housemate = housemate;
+    }
+
+    public Person getHousemate() {
+        return housemate;
+    }
+
     House() {
         cadastralNumber = "";
         address = "";
@@ -39,13 +47,6 @@ public class House implements Serializable {
         this.address = address;
     }
 
-    public Person getHousewife() {
-        return housemate;
-    }
-
-    public void setHousewife(Person housewife) {
-        this.housemate = housewife;
-    }
 
     public List<Flat> getApartments() {
         return apartments;
